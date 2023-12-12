@@ -9,6 +9,8 @@ apt install -y python3{-pip,-tk}
 pip3 install --upgrade pip
 pip3 install paho-mqtt
 
+sudo apt update && sudo apt install -y python3{-pip,-tk} && pip3 install --upgrade pip && pip3 install paho-mqtt
+
 # broker
 
 test.mosquito.org
@@ -17,14 +19,10 @@ test.mosquito.org
 
 2 VMs, pour montrer quelles peuvent communiquer
 
-```python
-import random
-from paho.mqtt import client as mqtt_client
+tkinter faire un onglet : connexion: liste des topics avec un bouton subscribe des topics, send to topic, listing topic
 
-broker = 'test.mosquitto.org'
-port = 1883
-topic = "/adehu"
-# generate client ID with pub prefix randomly
-client_id = f'python-mqtt-{random.randint(0, 1000)}'
-```
+enregistrer la liste des topics dans un fichier ? (base de données)
 
+tkinter designer, figma
+
+à faire: ulti threading

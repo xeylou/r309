@@ -31,15 +31,15 @@ def connect_mqtt():
 
 def publish(client):
     time.sleep(2)
-    
-    msg = "A single message from my computer"
+
+    msg = "test2"
     result = client.publish(topic, msg)
     # result: [0, 1]
     status = result[0]
     if status == 0:
-        print(f"Send `{msg}` to topic `{topic}`")
+        print(f"[DEBUG] Send `{msg}` to topic `{topic}` on broker {broker}")
     else:
-        print(f"Failed to send message to topic {topic}")
+        print(f"[DEBUG] Failed to send message to topic {topic} on broker {broker}")
 
 # --------------------------------------------------
 
